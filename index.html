@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style-m.css">
     <link rel="stylesheet" href="style-sm.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>buy-taxi-thrid</title>
 </head>
 <body>
@@ -48,7 +48,12 @@
                 </div>
                 <div class="taxi__wrapper">
                     <div class="kia-text">
-                        KIA <span>под такси</span>
+                        <p id="kia-text">
+                            KIA RIO NEW<br>
+                            <p class="span">от 183 ₽/день</p>
+                        </p>
+                        <div class="car__img2"></div>
+                        <span></span>
                     </div>
                     <p class="taxi__text">
                     в кредит 
@@ -87,6 +92,10 @@
                         </div>
                         <strong class="content__strong">Осталось 11 автомобилей</strong>
                     </div>
+                    <p class="taxi__text2">
+                        в кредит 
+                        <span>от 183 ₽/день</span>
+                    </p>
                     <button class="content__btn">Получить предложение</button>
                     <button class="content__btn-mobile">Получить предложение</button>
                 </div>
@@ -98,7 +107,7 @@
                 <img src="/img/icon1.svg" alt="icon" class="icon__img">
                 <p class="icon__txt">ставка по кредиту<br>
                     от 8%</p>
-                </div>
+            </div>
             <div class="icon__second">
                 <img src="/img/icon2.svg" alt="icon" class="icon__img">
                 <p class="icon__txt">более 40<br>
@@ -115,221 +124,859 @@
             <div class="equipment__select">
                 <p class="eq__text">1.4 МТ</p>
                 <div class="eq__model">
-                    <strong class="eq__str">Classic</strong>
-                    <p class="eq__txt">МКПП 6</p>
-                    <p class="eq__price">459 100 ₽</p>
-                    <div class="eq__elps">
-                        <i class="bx bx-chevron-down"></i>
+                    <div class="eq__model-wr">
+                        <strong class="eq__str">Classic</strong>
+                        <p class="eq__txt">МКПП 6</p>
+                        <p class="eq__price">459 100 ₽</p>
+                        <div class="eq__elps">
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="eq__after">
-                    <div class="eq__speed">
-                        <img src="/img/speed.svg" alt="speed" class="speed__img">
-                        <small>164 км/ч</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/time.svg" alt="speed" class="speed__img">
-                        <small>14 c</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/sitting.svg" alt="speed" class="speed__img">
-                        <small>128 л.с.</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/oil.svg" alt="speed" class="speed__img">
-                        <small>7,2л./100 км</small>
-                    </div>
-                    <button class="eq__btn">купить в кредит</button>
-                    <div class="select-menu">
-                        <div class="select-btn">
-                            <p class="sBtn-text">Подробнее
-                                <i class="bx bx-chevron-down"></i>
-                               <span>о комплектации</span>
-                            </p>    
+                    <div id="eq__after">
+                        <div class="eq__after">
+                            <div class="after-wr">
+                                <div class="eq__speed">
+                                    <img src="/img/speed.svg" alt="speed" class="speed__img">
+                                    <small>164 км/ч</small>
+                                </div>
+                                <div class="eq__speed">
+                                    <img src="/img/time.svg" alt="speed" class="speed__img">
+                                    <small>14 c</small>
+                                </div>
+                            </div>
+                            <div class="after-wr2">
+                                <div class="eq__speed">
+                                    <img src="/img/sitting.svg" alt="speed" class="speed__img">
+                                    <small class="sm">128 л.с.</small>
+                                </div>
+                                <div class="eq__speed">
+                                    <img src="/img/oil.svg" alt="speed" class="speed__img">
+                                    <small>7,2л./100 км</small>
+                                </div>
+                            </div>
+                            <button class="eq__btn">купить в кредит</button>
+                                    <p class="sBtn-text">Подробнее
+                                        <i class="bx bx-chevron-down"></i>
+                                        <span>о комплектации</span>
+                                    </p>    
                         </div>
                         <div class="options">
-                         
+                            <button class="btn__close">X</button>
+                            <div for="">
+                                <strong>Внешний вид</strong>
+                                <ul class="option1">
+                                    <li>Галогенные фары</li>
+                                    <li> Боковые зеркала в цвет кузова</li>
+                                    <li> Электроподогрев зеркал</li>
+                                    <li> Ручки дверей в цвет кузова</li>
+                                    <li> Обогрев заднего стекла в цвет кузова</li>
+                                    <li> Задние брызговики</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                               <strong> Оборудование салона / Интерьер</strong>
+                                <ul class="option2">
+                                    <li>Кожаная оплетка рулевого колеса</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                                <strong>Системы безопасности</strong>
+                                <ul class="option2">
+                                    <li>Антиблокировочная система (ABS)</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- page2 -->
+
             <div class="equipment__select">
                 <p class="eq__text">1.6 МТ</p>
                 <div class="eq__model">
-                    <strong class="eq__str">Comfort</strong>
-                    <p class="eq__txt">МКПП 6</p>
-                    <p class="eq__price">459 100 ₽</p>
-                    <div class="eq__elps">
-                        <i class="bx bx-chevron-down"></i>
+                    <div class="eq__model-wr">
+                        <strong class="eq__str">Comfort</strong>
+                        <p class="eq__txt">МКПП 6</p>
+                        <p class="eq__price">459 100 ₽</p>
+                        <div class="eq__elps">
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                    </div>
+                <div id="eq__after">
+                        <div class="eq__after">
+                            <div class="eq__speed">
+                                <img src="/img/speed.svg" alt="speed" class="speed__img">
+                                <small>164 км/ч</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/time.svg" alt="speed" class="speed__img">
+                                <small>14 c</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/sitting.svg" alt="speed" class="speed__img">
+                                <small>128 л.с.</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/oil.svg" alt="speed" class="speed__img">
+                                <small>7,2л./100 км</small>
+                            </div>
+                            <button class="eq__btn">купить в кредит</button>
+                                    <p class="sBtn-text">Подробнее
+                                        <i class="bx bx-chevron-down"></i>
+                                        <span>о комплектации</span>
+                                    </p>    
+                        </div>
+                        <div class="options">
+                            <div for="">
+                                <strong>Внешний вид</strong>
+                                <ul class="option1">
+                                    <li>Галогенные фары</li>
+                                    <li> Боковые зеркала в цвет кузова</li>
+                                    <li> Электроподогрев зеркал</li>
+                                    <li> Ручки дверей в цвет кузова</li>
+                                    <li> Обогрев заднего стекла в цвет кузова</li>
+                                    <li> Задние брызговики</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                               <strong> Оборудование салона / Интерьер</strong>
+                                <ul class="option2">
+                                    <li>Кожаная оплетка рулевого колеса</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                                <strong>Системы безопасности</strong>
+                                <ul class="option2">
+                                    <li>Антиблокировочная система (ABS)</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="eq__model">
-                    <strong class="eq__str">Luxe AV</strong>
-                    <p class="eq__txt">МКПП 6</p>
-                    <p class="eq__price">459 100 ₽</p>
-                    <div class="eq__elps">
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="eq__after">
-                    <div class="eq__speed">
-                        <img src="/img/speed.svg" alt="speed" class="speed__img">
-                        <small>164 км/ч</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/time.svg" alt="speed" class="speed__img">
-                        <small>14 c</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/sitting.svg" alt="speed" class="speed__img">
-                        <small>128 л.с.</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/oil.svg" alt="speed" class="speed__img">
-                        <small>7,2л./100 км</small>
-                    </div>
-                    <button class="eq__btn">купить в кредит</button>
-                    <div class="select-menu">
-                        <div class="select-btn">
-                            <p class="sBtn-text">Подробнее
-                                <i class="bx bx-chevron-down"></i>
-                               <span>о комплектации</span>
-                            </p>    
+                    <div class="eq__model-wr">
+                        <strong class="eq__str">Luxe AV</strong>
+                        <p class="eq__txt">МКПП 6</p>
+                        <p class="eq__price">459 100 ₽</p>
+                        <div class="eq__elps">
+                            <i class="bx bx-chevron-down"></i>
                         </div>
-                        <ul class="options">
-                            <li class="option">
-
-                            </li>
-                        </ul>
+                    </div>
+                <div id="eq__after">
+                        <div class="eq__after">
+                            <div class="eq__speed">
+                                <img src="/img/speed.svg" alt="speed" class="speed__img">
+                                <small>164 км/ч</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/time.svg" alt="speed" class="speed__img">
+                                <small>14 c</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/sitting.svg" alt="speed" class="speed__img">
+                                <small>128 л.с.</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/oil.svg" alt="speed" class="speed__img">
+                                <small>7,2л./100 км</small>
+                            </div>
+                            <button class="eq__btn">купить в кредит</button>
+                                    <p class="sBtn-text">Подробнее
+                                        <i class="bx bx-chevron-down"></i>
+                                        <span>о комплектации</span>
+                                    </p>    
+                        </div>
+                        <div class="options">
+                            <div for="">
+                                <strong>Внешний вид</strong>
+                                <ul class="option1">
+                                    <li>Галогенные фары</li>
+                                    <li> Боковые зеркала в цвет кузова</li>
+                                    <li> Электроподогрев зеркал</li>
+                                    <li> Ручки дверей в цвет кузова</li>
+                                    <li> Обогрев заднего стекла в цвет кузова</li>
+                                    <li> Задние брызговики</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                               <strong> Оборудование салона / Интерьер</strong>
+                                <ul class="option2">
+                                    <li>Кожаная оплетка рулевого колеса</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                                <strong>Системы безопасности</strong>
+                                <ul class="option2">
+                                    <li>Антиблокировочная система (ABS)</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- page3 -->
+
             <div class="equipment__select">
-                <p class="eq__text">1.4 AT</p>
+                <p class="eq__text">1.4 АТ</p>
                 <div class="eq__model">
-                    <strong class="eq__str">Comfort</strong>
-                    <p class="eq__txt">МКПП 6</p>
-                    <p class="eq__price">459 100 ₽</p>
-                    <div class="eq__elps">
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="eq__after">
-                    <div class="eq__speed">
-                        <img src="/img/speed.svg" alt="speed" class="speed__img">
-                        <small>164 км/ч</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/time.svg" alt="speed" class="speed__img">
-                        <small>14 c</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/sitting.svg" alt="speed" class="speed__img">
-                        <small>128 л.с.</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/oil.svg" alt="speed" class="speed__img">
-                        <small>7,2л./100 км</small>
-                    </div>
-                    <button class="eq__btn">купить в кредит</button>
-                    <div class="select-menu">
-                        <div class="select-btn">
-                            <p class="sBtn-text">Подробнее
-                                <i class="bx bx-chevron-down"></i>
-                               <span>о комплектации</span>
-                            </p>    
+                    <div class="eq__model-wr">
+                        <strong class="eq__str">Comfort</strong>
+                        <p class="eq__txt">МКПП 6</p>
+                        <p class="eq__price">459 100 ₽</p>
+                        <div class="eq__elps">
+                            <i class="bx bx-chevron-down"></i>
                         </div>
-                        <ul class="options">
-                            <li class="option">
-
-                            </li>
-                        </ul>
+                    </div>
+                <div id="eq__after">
+                        <div class="eq__after">
+                            <div class="eq__speed">
+                                <img src="/img/speed.svg" alt="speed" class="speed__img">
+                                <small>164 км/ч</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/time.svg" alt="speed" class="speed__img">
+                                <small>14 c</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/sitting.svg" alt="speed" class="speed__img">
+                                <small>128 л.с.</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/oil.svg" alt="speed" class="speed__img">
+                                <small>7,2л./100 км</small>
+                            </div>
+                            <button class="eq__btn">купить в кредит</button>
+                                    <p class="sBtn-text">Подробнее
+                                        <i class="bx bx-chevron-down"></i>
+                                        <span>о комплектации</span>
+                                    </p>    
+                        </div>
+                        <div class="options">
+                            <div for="">
+                                <strong>Внешний вид</strong>
+                                <ul class="option1">
+                                    <li>Галогенные фары</li>
+                                    <li> Боковые зеркала в цвет кузова</li>
+                                    <li> Электроподогрев зеркал</li>
+                                    <li> Ручки дверей в цвет кузова</li>
+                                    <li> Обогрев заднего стекла в цвет кузова</li>
+                                    <li> Задние брызговики</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                               <strong> Оборудование салона / Интерьер</strong>
+                                <ul class="option2">
+                                    <li>Кожаная оплетка рулевого колеса</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                                <strong>Системы безопасности</strong>
+                                <ul class="option2">
+                                    <li>Антиблокировочная система (ABS)</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div>            
+
+            <!-- page4 -->
+
             <div class="equipment__select">
-                <p class="eq__text">1.6 AT</p>
+                <p class="eq__text">1.6 AТ</p>
                 <div class="eq__model">
-                    <strong class="eq__str">Classic Audio</strong>
-                    <p class="eq__txt">МКПП 6</p>
-                    <p class="eq__price">459 100 ₽</p>
-                    <div class="eq__elps">
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="eq__model">
-                    <strong class="eq__str">Luxe <Audio></Audio></strong>
-                    <p class="eq__txt">МКПП 6</p>
-                    <p class="eq__price">459 100 ₽</p>
-                    <div class="eq__elps">
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="eq__model">
-                    <strong class="eq__str">Luxe AV</strong>
-                    <p class="eq__txt">МКПП 6</p>
-                    <p class="eq__price">459 100 ₽</p>
-                    <div class="eq__elps">
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="eq__model">
-                    <strong class="eq__str">Stile</strong>
-                    <p class="eq__txt">МКПП 6</p>
-                    <p class="eq__price">459 100 ₽</p>
-                    <div class="eq__elps">
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="eq__model">
-                    <strong class="eq__str">Prestige</strong>
-                    <p class="eq__txt">МКПП 6</p>
-                    <p class="eq__price">459 100 ₽</p>
-                    <div class="eq__elps">
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="eq__model">
-                    <strong class="eq__str">Premium</strong>
-                    <p class="eq__txt">МКПП 6</p>
-                    <p class="eq__price">459 100 ₽</p>
-                    <div class="eq__elps">
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="eq__after">
-                    <div class="eq__speed">
-                        <img src="/img/speed.svg" alt="speed" class="speed__img">
-                        <small>164 км/ч</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/time.svg" alt="speed" class="speed__img">
-                        <small>14 c</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/sitting.svg" alt="speed" class="speed__img">
-                        <small>128 л.с.</small>
-                    </div>
-                    <div class="eq__speed">
-                        <img src="/img/oil.svg" alt="speed" class="speed__img">
-                        <small>7,2л./100 км</small>
-                    </div>
-                    <button class="eq__btn">купить в кредит</button>
-                    <div class="select-menu">
-                        <div class="select-btn">
-                            <p class="sBtn-text">Подробнее
-                                <i class="bx bx-chevron-down"></i>
-                               <span>о комплектации</span>
-                            </p>    
+                    <div class="eq__model-wr">
+                        <strong class="eq__str">Classic Audio</strong>
+                        <p class="eq__txt">AКПП 6</p>
+                        <p class="eq__price">459 100 ₽</p>
+                        <div class="eq__elps">
+                            <i class="bx bx-chevron-down"></i>
                         </div>
-                        <ul class="options">
-                            <li class="option">
-
-                            </li>
-                        </ul>
+                    </div>
+                    <div id="eq__after">
+                        <div class="eq__after">
+                            <div class="eq__speed">
+                                <img src="/img/speed.svg" alt="speed" class="speed__img">
+                                <small>164 км/ч</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/time.svg" alt="speed" class="speed__img">
+                                <small>14 c</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/sitting.svg" alt="speed" class="speed__img">
+                                <small>128 л.с.</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/oil.svg" alt="speed" class="speed__img">
+                                <small>7,2л./100 км</small>
+                            </div>
+                            <button class="eq__btn">купить в кредит</button>
+                                    <p class="sBtn-text">Подробнее
+                                        <i class="bx bx-chevron-down"></i>
+                                        <span>о комплектации</span>
+                                    </p>    
+                        </div>
+                        <div class="options">
+                            <div for="">
+                                <strong>Внешний вид</strong>
+                                <ul class="option1">
+                                    <li>Галогенные фары</li>
+                                    <li> Боковые зеркала в цвет кузова</li>
+                                    <li> Электроподогрев зеркал</li>
+                                    <li> Ручки дверей в цвет кузова</li>
+                                    <li> Обогрев заднего стекла в цвет кузова</li>
+                                    <li> Задние брызговики</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                               <strong> Оборудование салона / Интерьер</strong>
+                                <ul class="option2">
+                                    <li>Кожаная оплетка рулевого колеса</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                                <strong>Системы безопасности</strong>
+                                <ul class="option2">
+                                    <li>Антиблокировочная система (ABS)</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="eq__model">
+                    <div class="eq__model-wr">
+                        <strong class="eq__str">Classic Audio</strong>
+                        <p class="eq__txt">AКПП 6</p>
+                        <p class="eq__price">459 100 ₽</p>
+                        <div class="eq__elps">
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div id="eq__after">
+                        <div class="eq__after">
+                            <div class="eq__speed">
+                                <img src="/img/speed.svg" alt="speed" class="speed__img">
+                                <small>164 км/ч</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/time.svg" alt="speed" class="speed__img">
+                                <small>14 c</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/sitting.svg" alt="speed" class="speed__img">
+                                <small>128 л.с.</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/oil.svg" alt="speed" class="speed__img">
+                                <small>7,2л./100 км</small>
+                            </div>
+                            <button class="eq__btn">купить в кредит</button>
+                                    <p class="sBtn-text">Подробнее
+                                        <i class="bx bx-chevron-down"></i>
+                                        <span>о комплектации</span>
+                                    </p>    
+                        </div>
+                        <div class="options">
+                            <div for="">
+                                <strong>Внешний вид</strong>
+                                <ul class="option1">
+                                    <li>Галогенные фары</li>
+                                    <li> Боковые зеркала в цвет кузова</li>
+                                    <li> Электроподогрев зеркал</li>
+                                    <li> Ручки дверей в цвет кузова</li>
+                                    <li> Обогрев заднего стекла в цвет кузова</li>
+                                    <li> Задние брызговики</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                               <strong> Оборудование салона / Интерьер</strong>
+                                <ul class="option2">
+                                    <li>Кожаная оплетка рулевого колеса</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                                <strong>Системы безопасности</strong>
+                                <ul class="option2">
+                                    <li>Антиблокировочная система (ABS)</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="eq__model">
+                    <div class="eq__model-wr">
+                        <strong class="eq__str">Luxe AV</strong>
+                        <p class="eq__txt">AКПП 6</p>
+                        <p class="eq__price">459 100 ₽</p>
+                        <div class="eq__elps">
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div id="eq__after">
+                        <div class="eq__after">
+                            <div class="eq__speed">
+                                <img src="/img/speed.svg" alt="speed" class="speed__img">
+                                <small>164 км/ч</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/time.svg" alt="speed" class="speed__img">
+                                <small>14 c</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/sitting.svg" alt="speed" class="speed__img">
+                                <small>128 л.с.</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/oil.svg" alt="speed" class="speed__img">
+                                <small>7,2л./100 км</small>
+                            </div>
+                            <button class="eq__btn">купить в кредит</button>
+                                    <p class="sBtn-text">Подробнее
+                                        <i class="bx bx-chevron-down"></i>
+                                        <span>о комплектации</span>
+                                    </p>    
+                        </div>
+                        <div class="options">
+                            <div for="">
+                                <strong>Внешний вид</strong>
+                                <ul class="option1">
+                                    <li>Галогенные фары</li>
+                                    <li> Боковые зеркала в цвет кузова</li>
+                                    <li> Электроподогрев зеркал</li>
+                                    <li> Ручки дверей в цвет кузова</li>
+                                    <li> Обогрев заднего стекла в цвет кузова</li>
+                                    <li> Задние брызговики</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                               <strong> Оборудование салона / Интерьер</strong>
+                                <ul class="option2">
+                                    <li>Кожаная оплетка рулевого колеса</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                                <strong>Системы безопасности</strong>
+                                <ul class="option2">
+                                    <li>Антиблокировочная система (ABS)</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="eq__model">
+                    <div class="eq__model-wr">
+                        <strong class="eq__str">Prestige</strong>
+                        <p class="eq__txt">AКПП 6</p>
+                        <p class="eq__price">459 100 ₽</p>
+                        <div class="eq__elps">
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div id="eq__after">
+                        <div class="eq__after">
+                            <div class="eq__speed">
+                                <img src="/img/speed.svg" alt="speed" class="speed__img">
+                                <small>164 км/ч</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/time.svg" alt="speed" class="speed__img">
+                                <small>14 c</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/sitting.svg" alt="speed" class="speed__img">
+                                <small>128 л.с.</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/oil.svg" alt="speed" class="speed__img">
+                                <small>7,2л./100 км</small>
+                            </div>
+                            <button class="eq__btn">купить в кредит</button>
+                                    <p class="sBtn-text">Подробнее
+                                        <i class="bx bx-chevron-down"></i>
+                                        <span>о комплектации</span>
+                                    </p>    
+                        </div>
+                        <div class="options">
+                            <div for="">
+                                <strong>Внешний вид</strong>
+                                <ul class="option1">
+                                    <li>Галогенные фары</li>
+                                    <li> Боковые зеркала в цвет кузова</li>
+                                    <li> Электроподогрев зеркал</li>
+                                    <li> Ручки дверей в цвет кузова</li>
+                                    <li> Обогрев заднего стекла в цвет кузова</li>
+                                    <li> Задние брызговики</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                               <strong> Оборудование салона / Интерьер</strong>
+                                <ul class="option2">
+                                    <li>Кожаная оплетка рулевого колеса</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                                <strong>Системы безопасности</strong>
+                                <ul class="option2">
+                                    <li>Антиблокировочная система (ABS)</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="eq__model">
+                    <div class="eq__model-wr">
+                        <strong class="eq__str">Stile</strong>
+                        <p class="eq__txt">AКПП 6</p>
+                        <p class="eq__price">459 100 ₽</p>
+                        <div class="eq__elps">
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div id="eq__after">
+                        <div class="eq__after">
+                            <div class="eq__speed">
+                                <img src="/img/speed.svg" alt="speed" class="speed__img">
+                                <small>164 км/ч</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/time.svg" alt="speed" class="speed__img">
+                                <small>14 c</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/sitting.svg" alt="speed" class="speed__img">
+                                <small>128 л.с.</small>
+                            </div>
+                            <div class="eq__speed">
+                                <img src="/img/oil.svg" alt="speed" class="speed__img">
+                                <small>7,2л./100 км</small>
+                            </div>
+                            <button class="eq__btn">купить в кредит</button>
+                                    <p class="sBtn-text">Подробнее
+                                        <i class="bx bx-chevron-down"></i>
+                                        <span>о комплектации</span>
+                                    </p>    
+                        </div>
+                        <div class="options">
+                            <div for="">
+                                <strong>Внешний вид</strong>
+                                <ul class="option1">
+                                    <li>Галогенные фары</li>
+                                    <li> Боковые зеркала в цвет кузова</li>
+                                    <li> Электроподогрев зеркал</li>
+                                    <li> Ручки дверей в цвет кузова</li>
+                                    <li> Обогрев заднего стекла в цвет кузова</li>
+                                    <li> Задние брызговики</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                               <strong> Оборудование салона / Интерьер</strong>
+                                <ul class="option2">
+                                    <li>Кожаная оплетка рулевого колеса</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                            <div for="">
+                                <strong>Системы безопасности</strong>
+                                <ul class="option2">
+                                    <li>Антиблокировочная система (ABS)</li>
+                                    <li>Вертикальная регулировка руля</li>
+                                    <li>Регулируемая рулевая колонка</li>
+                                    <li>Управление аудиосистемой на руле</li>
+                                    <li>Телескопическая регулировка руля</li>
+                                    <li>Сидение водителя с регулировкой по высоте</li>
+                                    <li>Складывается в соотношении 60/40</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                    <li> Карманы на спинках передни</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            
         </section>
         <section class="service">
             <h2 class="service__heading">услуги</h2>
@@ -413,21 +1060,309 @@
             <h2 class="swipper__heading">другие такси <span>эконом</span></h2>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">Slide 1</div>
-                  <div class="swiper-slide">Slide 2</div>
-                  <div class="swiper-slide">Slide 3</div>
-                  <div class="swiper-slide">Slide 4</div>
-                  <div class="swiper-slide">Slide 5</div>
-                  <div class="swiper-slide">Slide 6</div>
-                  <div class="swiper-slide">Slide 7</div>
-                  <div class="swiper-slide">Slide 8</div>
-                  <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">
+                        <div class="card__swp-prev">
+                            <div class="card__head">
+                                <h4 class="card__name">VOLKSWAGEN POLO NEW</h4>
+                                <span class="card__price">от 459 100 ₽</span>
+                            </div>
+                            <img class="card__img" src="/img/mini-polo.svg" alt="car">
+                            <div class="card__info">
+                                <div class="card__info-wr">
+                                    <p class="card__txt">в кредит</p>
+                                    <span class="card__span">от 183 ₽/день</span>
+                                </div>
+                                <button class="card__btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card__swp">
+                            <div class="card__head">
+                                <h4 class="card__name">VOLKSWAGEN POLO NEW</h4>
+                                <span class="card__price">от 459 100 ₽</span>
+                            </div>
+                            <img class="card__img" src="/img/mini-rapid.svg" alt="car">
+                            <div class="card__info">
+                                <div class="card__info-wr">
+                                    <p class="card__txt">в кредит</p>
+                                    <span class="card__span">от 183 ₽/день</span>
+                                </div>
+                                <button class="card__btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card__swp-next">
+                            <div class="card__head">
+                                <h4 class="card__name">VOLKSWAGEN POLO NEW</h4>
+                                <span class="card__price">от 459 100 ₽</span>
+                            </div>
+                            <img class="card__img" src="/img/mini-logan.svg" alt="car">
+                            <div class="card__info">
+                                <div class="card__info-wr">
+                                    <p class="card__txt">в кредит</p>
+                                    <span class="card__span">от 183 ₽/день</span>
+                                </div>
+                                <button class="card__btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card__swp-prev">
+                            <div class="card__head">
+                                <h4 class="card__name">VOLKSWAGEN POLO NEW</h4>
+                                <span class="card__price">от 459 100 ₽</span>
+                            </div>
+                            <img class="card__img" src="/img/mini-polo.svg" alt="car">
+                            <div class="card__info">
+                                <div class="card__info-wr">
+                                    <p class="card__txt">в кредит</p>
+                                    <span class="card__span">от 183 ₽/день</span>
+                                </div>
+                                <button class="card__btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card__swp">
+                            <div class="card__head">
+                                <h4 class="card__name">VOLKSWAGEN POLO NEW</h4>
+                                <span class="card__price">от 459 100 ₽</span>
+                            </div>
+                            <img class="card__img" src="/img/mini-logan.svg" alt="car">
+                            <div class="card__info">
+                                <div class="card__info-wr">
+                                    <p class="card__txt">в кредит</p>
+                                    <span class="card__span">от 183 ₽/день</span>
+                                </div>
+                                <button class="card__btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card__swp-next">
+                            <div class="card__head">
+                                <h4 class="card__name">VOLKSWAGEN POLO NEW</h4>
+                                <span class="card__price">от 459 100 ₽</span>
+                            </div>
+                            <img class="card__img" src="/img/mini-rapid.svg" alt="car">
+                            <div class="card__info">
+                                <div class="card__info-wr">
+                                    <p class="card__txt">в кредит</p>
+                                    <span class="card__span">от 183 ₽/день</span>
+                                </div>
+                                <button class="card__btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card__swp-prev">
+                            <div class="card__head">
+                                <h4 class="card__name">VOLKSWAGEN POLO NEW</h4>
+                                <span class="card__price">от 459 100 ₽</span>
+                            </div>
+                            <img class="card__img" src="/img/mini-polo.svg" alt="car">
+                            <div class="card__info">
+                                <div class="card__info-wr">
+                                    <p class="card__txt">в кредит</p>
+                                    <span class="card__span">от 183 ₽/день</span>
+                                </div>
+                                <button class="card__btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card__swp">
+                            <div class="card__head">
+                                <h4 class="card__name">VOLKSWAGEN POLO NEW</h4>
+                                <span class="card__price">от 459 100 ₽</span>
+                            </div>
+                            <img class="card__img" src="/img/mini-logan.svg" alt="car">
+                            <div class="card__info">
+                                <div class="card__info-wr">
+                                    <p class="card__txt">в кредит</p>
+                                    <span class="card__span">от 183 ₽/день</span>
+                                </div>
+                                <button class="card__btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card__swp-next">
+                            <div class="card__head">
+                                <h4 class="card__name">VOLKSWAGEN POLO NEW</h4>
+                                <span class="card__price">от 459 100 ₽</span>
+                            </div>
+                            <img class="card__img" src="/img/mini-rapid.svg" alt="car">
+                            <div class="card__info">
+                                <div class="card__info-wr">
+                                    <p class="card__txt">в кредит</p>
+                                    <span class="card__span">от 183 ₽/день</span>
+                                </div>
+                                <button class="card__btn">Подробнее</button>
+                            </div>
+                        </div>
+                 </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </section>
+        <section class="best">
+            <h2 class="best__heading">
+                лучшее предложение на рынке
+            </h2>
+            <div class="best__wrapper">
+                <div class="best__one">
+                    <div class="best__block">
+                        <img class="icon1" src="/img/i1.svg" alt="riting">
+                        <p class="best__txt">
+                            Помощь в оформлении<br>
+                            документов
+                        </p>
+                    </div>
+                    <div class="best__block">
+                        <img class="icon2" src="/img/i2.svg" alt="riting">
+                        <p class="best__txt">
+                            ГБО. Установка и монтаж
+                        </p>
+                    </div>
+                    <div class="best__block">
+                        <img class="icon3" src="/img/i3.svg" alt="riting">
+                        <p class="best__txt">
+                            Более 1500 авто в наличии
+                        </p>
+                    </div>
+                    <div class="best__block">
+                        <img class="icon4" src="/img/i4.svg" alt="riting">
+                        <p class="best__txt">
+                            Покупка такси за один день
+                        </p>
+                    </div>
+                </div>
+                <form action="" class="best__form">
+                    <input type="text" class="best__inp" placeholder="ваше имя">
+                    <input type="text" class="best__inp" placeholder="введите  номер телефона">
+                    <button class="best__btn">Получить предложение</button>
+                </form>
+            </div>
+            <div class="best__info">
+                <div class="info__mobile">
+                    <small class="info__small">Карта сайта</small>
+                    <small class="info__small">контакты</small>
+                </div>
+                <small class="info__small" id="hidden">Карта сайта</small>
+                <small class="info__small" id="hidden">контакты</small>
+                <small class="info__small">
+                    правовая<br>
+                    информация</small>
+
+            </div>
+        </section>
+        <footer class="footer">
+            <h3 class="footer__heading">Каталог такси</h3>
+            <div class="footer__wrapper">
+                <div class="footer__cars1">
+                    <div class="cars__block1">
+                        <ul class="ul__block">
+                            <li>VOLKSWAGEN POLO NEW</li>
+                            <li>KIA K5 NEW</li>
+                            <li>VOLKSWAGEN JETTA NEW</li>
+                            <li>CITROEN BERLINGO</li>
+                            <li>CITROEN C4</li>
+                            <li>FORD FOCUS SEDAN</li>
+                            <li>FORD GALAXY</li>
+                            <li>HYUNDAI I40</li>
+                            <li>KIA CERATO</li>
+                            <li>MAZDA 3 SEDAN</li>
+                            <li>MAZDA 3 HATCBACK</li>
+                            <li>NISSAN TEANA</li>
+                            <li>RENAULT DOKKER STEPWAY</li>
+                            <li>SKODA SUPERB</li>
+                            <li>TOYOTA COROLLA</li>
+                            <li>VOLKSWAGEN PASSAT</li>
+                        </ul>
+                    </div>
+                    <div class="cars__block2">
+                        <ul class="ul__block">
+                            <li>HYUNDAI CRETA NEW</li>
+                            <li>HYUNDAI SOLARIS NEW</li>
+                            <li>KIA SOUL NEW</li>
+                            <li>HYUNDAI SONATA NEW</li>
+                            <li>MAZDA 6 NEW</li>
+                            <li>HYUNDAI Н1</li>
+                            <li>RENAULT DOKKER</li>
+                            <li>TOYOTA ALPHARD</li>
+                            <li>CITROEN JUMPY</li>
+                            <li>MERCEDES-BENZ V-CLASS</li>
+                            <li>MERCEDES-BENZ VITO</li>
+                            <li>PEUGEOT TRAVELLER</li>
+                            <li>VOLKSWAGEN CARAVELLE</li>
+                            <li>VOLKSWAGEN TRANSPORTER</li>
+                            <li>VOLKSWAGEN MULTIVAN</li>
+                            <li>RAVON NEXIA R3</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__cars2">
+                    <div class="cars__block3">
+                        <ul class="ul__block">
+                            <li>LADA XRAY</li>
+                            <li>LADA VESTA SW CROSS</li>
+                            <li>LADA VESTA SW</li>
+                            <li>LADA GRANTA LIFTBACK</li>
+                            <li>TOYOTA CAMRY NEW</li>
+                            <li>KIA RIO X-LINE</li>
+                            <li>FORD FOCUS HATCHBACK</li>
+                            <li>HYUNDAI CRETA</li>
+                            <li>RENAULT LOGAN NEW</li>
+                            <li>CHEVROLET ORLANDO</li>
+                            <li>DATSUN MI-DO</li>
+                            <li>PEUGEOT 308</li>
+                            <li>DATSUN ON-DO</li>
+                            <li>KIA CEED SW NEW</li>
+                            <li>MAZDA 3 HATCHBACK</li>
+                            <li>KIA SOUL</li>
+                        </ul>
+                    </div>
+                    <div class="cars__block4">
+                        <ul class="ul__block">
+                            <li>SKODA RAPID NEW</li>
+                            <li>HYUNDAI SOLARIS</li>
+                            <li>KIA RIO</li>
+                            <li>NISSAN ALMERA</li>
+                            <li>VOLKSWAGEN POLO</li>
+                            <li>SKODA RAPID</li>
+                            <li>HYUNDAI ELANTRA</li>
+                            <li>HYUNDAI SONATA</li>
+                            <li>SKODA OCTAVIA</li>
+                            <li>VOLKSWAGEN JETTA</li>
+                            <li>KIA OPTIMA NEW</li>
+                            <li>MERCEDES-BENZ E-KLASSE</li>
+                            <li>BMW 5ER</li>
+                            <li>AUDI A6</li>
+                            <li>BMW 3 SERIES</li>
+                            <li>CITROEN GRAND C4 PICASSO</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__info">
+                <p class="footer__txt">© 2021 АЛЬФА-ТАКСИ</p>
+                <p class="footer__txt2">Правовая информация Политика конфиденциальности
+                </p>
+            </div>
+            <p class="footer__txt3">Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно
+                информационный характер и ни при каких условиях не является публичной<br> офертой, определяемой
+                положениями Статьи 437 (2) Гражданского кодекса РФ
+            </p>
+            <p class="footer__txt3-m">Обращаем Ваше внимание на то, что данный интернет-сайт носит<br> исключительно
+                информационный характер и ни при каких условиях не<br> является публичной офертой, определяемой
+                положениями Статьи 437<br> (2) Гражданского кодекса РФ
+            </p>
+        </footer>
     </main>   
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
@@ -446,6 +1381,29 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+    // when window width is >= 320px
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            slidesPerGroup: 1,
+
+            },
+            // when window width is >= 480px
+            450: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            },
+            451: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            }
+    // when window width is >= 640px
+  
+  }
+        
       });
     </script>
     <script src="main.js"></script>

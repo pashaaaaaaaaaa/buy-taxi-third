@@ -27,16 +27,34 @@ function updateTiming(){
 setInterval(updateTiming, 1000);
 let openBlock = document.querySelectorAll('.eq__elps')
 let afterBlock = document.querySelector('.eq__after')
+let afterBlock2 = document.getElementById('eq__after')
 openBlock.forEach((item)=>{
     item.addEventListener('click', ()=>{
         item.classList.toggle('active')
         if(item.classList.contains('active')){
             afterBlock.style.display = "flex"
+            afterBlock2.style.display = "flex"
          }else{
             afterBlock.style.display = 'none';
+            afterBlock2.style.display = 'none';
          }
     })
 })
 
-let btnDown = document.querySelector('.bx')
-console.log(btnDown)
+let btnDown = document.querySelector('.sBtn-text')
+let options = document.querySelector('.options')
+
+btnDown.addEventListener('click', ()=>{
+    let down = document.querySelector('.bx')
+    down.classList.toggle('active-btn')
+    if(down.classList.contains('active-btn')){
+        options.style.display = "flex"
+     }else{
+        options.style.display = 'none';
+     }
+})
+
+let closeModal = document.querySelector('.btn__close')
+closeModal.addEventListener('click', ()=>{
+    options.style.display = 'none'
+})
