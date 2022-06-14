@@ -931,6 +931,7 @@
         margin: 0;
     }
     .footer__txt3-m{
+        display: block;
         font-family: 'Proxima Nova', sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -947,5 +948,17 @@
     }
     .footer__txt3{
         display: none;
+        font-family: 'Proxima Nova', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 10px;
+        text-align: center;
+        color: white;
+        max-width: 335px;
+        width: 100%;
+        margin: 0;
+        height: auto;
+        white-space: nowrap;
     }
 }  

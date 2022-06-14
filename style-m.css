@@ -9,7 +9,6 @@
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
-        border: 1px solid red;
 
     }
     .header{
@@ -504,7 +503,6 @@
         padding-top: 22px;
         padding-left: 24px;
         padding-right: 24px;
-        border: 1px solid red;
     }
     .service__heading{
         font-family: 'Days', sans-serif;
