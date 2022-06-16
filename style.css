@@ -51,7 +51,8 @@
     justify-content: space-between;
     cursor: pointer;
 }
-.nav__ul li{
+.nav__ul a{
+    text-decoration: none;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -410,7 +411,15 @@
     transform: rotate(-180deg);
 
 }
-#eq__after{
+.eq__after1,
+.eq__after2,
+.eq__after3,
+.eq__after4,
+.eq__after5,
+.eq__after6,
+.eq__after7,
+.eq__after8,
+.eq__after9{
     background: #FFFFFF;
     width: 100%;
     height: auto;
@@ -667,7 +676,7 @@
     margin-bottom: 0;
 }
 /* swipper page*/
-#swipper{
+.swipperB{
     display: flex;
     width: 100%;
     text-align: center;

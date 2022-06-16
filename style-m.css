@@ -48,7 +48,8 @@
         flex-direction: column;
         cursor: pointer;
     }
-    .nav__ul li{
+    .nav__ul a{
+        text-decoration: none;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
@@ -146,7 +147,7 @@
         text-align: center;
 
     }
-    #kia-text{
+    .kia-text2{
         text-align: center;
         font-family: 'Days', sans-serif;
         font-style: normal;
@@ -344,7 +345,15 @@
         border-radius: 50%;
         cursor: pointer;
     }
-    #eq__after{
+    .eq__after1,
+    .eq__after2,
+    .eq__after3,
+    .eq__after4,
+    .eq__after5,
+    .eq__after6,
+    .eq__after7,
+    .eq__after8,
+    .eq__after9{
         background: #FFFFFF;
         width: 100%;
         height: auto;
@@ -573,8 +582,9 @@
         flex-direction: column;
         display: flex;
         margin-bottom: 49px;
+        margin-left: 10px;
     }
-    #swipper{
+    .swipperB{
         display: flex;
         width: 100%;
         text-align: center;
@@ -792,7 +802,10 @@
     .info__mobile small:nth-child(1){
         margin-bottom: 10px;
     }
-    #hidden{
+    .hidden{
+        display: none;
+    }
+    .hidden2{
         display: none;
     }
     .info__small{
