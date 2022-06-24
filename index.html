@@ -12,7 +12,6 @@
     <title>buy-taxi-thrid</title>
 </head>
 <body>
-    <main class="container">
         <header class="header">
             <a href="#" class="header__logo">
             </a>
@@ -56,8 +55,9 @@
                         <span></span>
                     </div>
                     <p class="taxi__text">
-                    в кредит 
+                    Купить в кредит 
                     <span>от 183 ₽/день</span>
+                    <span>от 10 000 ₽/месяц</span>
                     </p>
                     <div class="content__timing">
                         <div class="content__wrapper">
@@ -172,6 +172,7 @@
                                     <li> Обогрев заднего стекла в цвет кузова</li>
                                     <li> Задние брызговики</li>
                                 </ul>
+                                <img src="img/icons.svg" alt="icons" class="opt-icons">
                             </div>
                             <div for="">
                                <strong> Оборудование салона / Интерьер</strong>
@@ -1245,7 +1246,7 @@
                 <form action="" class="best__form">
                     <input type="text" class="best__inp" placeholder="ваше имя">
                     <input type="tel" class="best__inp" placeholder="введите  номер телефона">
-                    <button class="best__btn">Получить предложение</button>
+                    <button class="best__btn"><small>Получить предложение</small></button>
                 </form>
             </div>
             <div class="best__info">
@@ -1363,49 +1364,7 @@
                 положениями Статьи 437<br> (2) Гражданского кодекса РФ
             </p>
         </footer>
-    </main>   
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-    // when window width is >= 320px
-            320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            slidesPerGroup: 1,
-
-            },
-            // when window width is >= 480px
-            450: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            slidesPerGroup: 1,
-            },
-            451: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            slidesPerGroup: 3,
-            }
-    // when window width is >= 640px
-  
-  }
-        
-      });
-    </script>
     <script src="main.js"></script>
 </body>
 </html>
